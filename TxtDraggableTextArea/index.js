@@ -25,7 +25,7 @@ export default class TxtDraggableTextArea extends React.Component {
     const fileList = Array.from(e.dataTransfer.files);
 
     if (fileList && fileList[0]) {
-      reader.readAsText(fileList[0]);
+      reader.readAsText(fileList[0], 'gb2312');
     }
 
     reader.onload = e => {
